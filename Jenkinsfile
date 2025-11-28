@@ -29,5 +29,12 @@ pipeline{
                 }
             }
         }
+        stage('Melinne_Hay deploy app'){
+            steps{
+                script{
+                    sh 'docker run -d -p 80:80 melinnehay/webapp:v1'
+                }
+            }
+        }
     }
 }
