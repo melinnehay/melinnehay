@@ -32,7 +32,7 @@ pipeline{
         stage('Melinne_Hay deploy app'){
             steps{
                 script{
-                    sh 'docker run -d -p 80:80 melinnehay/webapp:v1'
+                    sh 'docker run --rm -p 5000:5000 melinnehay/webapp:v1'
                 }
             }
         }
